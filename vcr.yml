@@ -1,0 +1,19 @@
+project:
+    name: branded-call-server
+instance:
+    name: dev
+    runtime: nodejs22
+    region: aws.euw1
+    application-id: ded7af16-ea05-4482-bfac-a0bdefba3065
+    build-script: "./build.sh"
+    entrypoint: [node, index.js]
+    capabilities: [voice]
+    environment:
+        - name: SIP_DOMAIN_NAME
+          value: "vonage-abdul-ajetunmobi"
+        - name: VCR
+          value: true
+debug:
+    name: branded-call-debug
+    application-id: ded7af16-ea05-4482-bfac-a0bdefba3065
+    entrypoint: [nodemon, --inspect, index.js]

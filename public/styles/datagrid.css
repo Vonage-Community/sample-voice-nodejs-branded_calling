@@ -1,0 +1,165 @@
+.sip-list {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.call-search-from {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#createBrandForm input[type="tel"],
+#createBrandForm input[type="text"] {
+  width: 250px;
+  padding: 8px 12px;
+  line-height: 1.4;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+.form-group .input-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0 6px;
+  position: relative;
+  flex-grow: 1;
+}
+
+.form-group .button-group {
+  padding-top: 24px;
+  margin-left: 1rem;
+}
+
+.form-group div:first-of-type {
+  margin-left: 0;
+}
+
+.form-group div:last-of-type {
+  margin-right: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#errorMessage {
+  height: 21px;
+  color: red;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 3rem;
+}
+
+th,
+td {
+  border: none;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+tr td:last-child {
+  text-align: center;
+}
+
+tbody tr:last-of-type td {
+  border-bottom: none;
+}
+
+.chat-container {
+  display: flex;
+  background: #f6f6f6;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.bubble-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns content to the left */
+  margin: 5px 0;
+}
+
+.left {
+  align-self: flex-start;
+  justify-content: flex-start;
+}
+
+.right {
+  align-self: flex-end; 
+  justify-content: flex-end;
+}
+
+.chat-bubble {
+  padding: 0.5rem 1rem;
+  border-radius: 8px; 
+  margin: 0.2rem 0.5rem;
+  max-width: 80%;
+  display: block;
+  word-wrap: break-word;
+  text-align: left;
+  line-height: 1.6;
+}
+
+
+.bubble-0 {
+    background-color: #c4eafb;
+}
+
+.bubble-1 {
+    background-color: #a8ebc1;
+}
+
+.bubble-2 {
+    background-color: #fcbcbc;
+}
+
+.bubble-3 {
+    background-color: #ffe0b5; 
+}
+
+.bubble-4 {
+    background-color: #e3cef6; 
+}
+
+.timestamp {
+  font-size: 0.75em;
+  color: #999;
+  float: right;
+  margin-left: 10px;
+}
+
+.positive {
+  background-color: green;
+  white-space: nowrap;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.negative {
+  background-color: red;
+  white-space: nowrap;
+  color: white;
+  padding: 1px 5px;
+  border-radius: 4px;
+}

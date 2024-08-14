@@ -1,0 +1,19 @@
+.settings {
+  margin-top: 1rem;
+}
+
+.settings > .setting {
+  margin: 0.5rem 0;
+  display: flex;
+}
+
+.setting-name {
+  font-weight: 700;
+  min-width: 150px;
+}
+
+.setting-value {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}

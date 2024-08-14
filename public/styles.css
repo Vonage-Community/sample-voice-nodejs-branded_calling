@@ -1,0 +1,66 @@
+@import url("./styles/datagrid.css");
+@import url("./styles/settings.css");
+@import url("./styles/login.css");
+@import url("./styles/modal.css");
+@import url("./styles/tabs.css");
+@import url("./styles/markdown.css");
+
+@font-face {
+  font-display: block;
+  font-family: "SpeziaWebVariable";
+  font-stretch: 50% 200%;
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url("https://fonts.resources.vonage.com/fonts/v1/Spezia_Web_Complete_Upright.woff2")
+    format("woff2-variations");
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.btn-outline-danger {
+  --bs-btn-color: rgb(230, 29, 29);
+  --bs-btn-color-border: var(--bs-btn-color);
+  --bs-btn-hover-bg: var(--bs-btn-color);
+}
+
+.btn-success {
+  --bs-btn-bg: rgb(28, 135, 49);
+  --bs-btn-color-border: var(--bs-btn-bg);
+  --bs-btn-hover-bg: var(--bs-btn-bg);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: rgb(153, 65, 255);
+  --bs-btn-color-border: var(--bs-btn-color);
+  --bs-btn-border-color: var(--bs-btn-color);
+  --bs-btn-hover-bg: var(--bs-btn-color);
+  text-decoration: none;
+}
+
+.btn-outline-primary:hover {
+  text-decoration: none;
+}
+
+.center {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+body {
+  font-family: "SpeziaWebVariable", sans-serif;
+  font-size: 14px;
+}
+
+.btn:hover {
+  border-color: transparent;
+}

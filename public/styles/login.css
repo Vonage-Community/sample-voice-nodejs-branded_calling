@@ -1,0 +1,13 @@
+#loginScreen input[type="text"],
+#loginScreen input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error-message {
+  color: red;
+  height: 21px;
+}
