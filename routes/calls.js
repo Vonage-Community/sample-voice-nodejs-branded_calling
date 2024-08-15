@@ -1,11 +1,9 @@
-import { vcr } from '@vonage/vcr-sdk';
 import express from "express";
 
 import { getSipInfo } from "../helpers/helpers.js";
 import { getBrand } from "../helpers/storage.js";
 
 const router = express.Router();
-const state = vcr.getInstanceState();
 
 router.post('/voice/answer', async (req, res, next) => {
     try {
@@ -13,7 +11,6 @@ router.post('/voice/answer', async (req, res, next) => {
         console.log('to: ', req.body.to);
         console.log('from: ', req.body.from);
         console.log('from_user: ', req.body.from_user);
-        console.log('body: ', req.body);
 
         // App user calling
         if (req.body.from_user) {

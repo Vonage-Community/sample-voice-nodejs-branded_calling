@@ -13,5 +13,4 @@ instance:
           value: "vonage-abdul-ajetunmobi"
 debug:
     name: branded-call-debug
-    application-id: ded7af16-ea05-4482-bfac-a0bdefba3065
     entrypoint: [nodemon, --inspect, index.js]
