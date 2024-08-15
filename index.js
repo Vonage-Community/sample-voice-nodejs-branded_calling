@@ -9,8 +9,8 @@ import fs from 'fs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-import { getSipInfo, generateJwt, getDomainInfo } from "./helpers.js";
-import CSVManager from './csvManager.js';
+import { getSipInfo, generateJwt, getDomainInfo } from "./helpers/helpers.js";
+import CSVManager from './helpers/csvManager.js';
 import brands from './routes/brands.js';
 import calls from './routes/calls.js';
 
@@ -36,7 +36,7 @@ app.use(express.static('public'));
 app.use('/', calls);
 app.use('/', brands);
  
-if (process.env.VCR === 'true') {
+if (process.env.CSV_STORAGE !== 'true') {
     const voice = new Voice(vcr.getGlobalSession());
     await voice.onCall('/voice/answer');
     await voice.onCallEvent({ callback: '/voice/event' });

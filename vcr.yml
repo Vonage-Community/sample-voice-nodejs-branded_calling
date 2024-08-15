@@ -11,8 +11,6 @@ instance:
     environment:
         - name: SIP_DOMAIN_NAME
           value: "vonage-abdul-ajetunmobi"
-        - name: VCR
-          value: true
 debug:
     name: branded-call-debug
     application-id: ded7af16-ea05-4482-bfac-a0bdefba3065

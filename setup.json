@@ -1,0 +1,10 @@
+{
+    "data": [
+      {
+        "description": "Domain name for your SIP trunk. Create or get one on the API [dashboard](https://dashboard.nexmo.com/sip-trunking).",
+        "name": "SIP_DOMAIN_NAME",
+        "title": "SIP Domain Name",
+        "type": "TEXT"
+      }
+    ]
+}

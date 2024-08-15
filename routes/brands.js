@@ -1,6 +1,6 @@
 import express from "express";
 
-import { getBrands, createBrand, deleteBrand } from "../storage.js";
+import { getBrands, createBrand, deleteBrand } from "../helpers/storage.js";
 
 const router = express.Router();
 

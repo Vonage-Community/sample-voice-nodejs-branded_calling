@@ -12,7 +12,7 @@ async function getBrand(key) {
 async function getBrands() {
     let brands;
 
-    if (process.env.VCR === 'true') {
+    if (process.env.CSV_STORAGE !== 'true') {
         const state = vcr.getInstanceState();
         const brandData = await state.mapGetValues('brands');
         brands = brandData.map(JSON.parse)
@@ -28,7 +28,7 @@ async function getBrands() {
 
 async function createBrand(brand) {
     const number = brand.number;
-    if (process.env.VCR === 'true') {
+    if (process.env.CSV_STORAGE !== 'true') {
         const state = vcr.getInstanceState();
         await state.mapSet('brands', { [number]: JSON.stringify(brand) });
     } else {
@@ -38,7 +38,7 @@ async function createBrand(brand) {
 }
 
 async function deleteBrand(number) {
-    if (process.env.VCR === 'true') {
+    if (process.env.CSV_STORAGE !== 'true') {
         const state = vcr.getInstanceState();
         await state.mapDelete('brands', [number])
     } else {

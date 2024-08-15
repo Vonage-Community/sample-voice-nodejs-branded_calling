@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "command": "if [ ! -d node_modules ]; then npm install; fi && npm run debug",
+            "name": "Start Debugger",
+            "request": "launch",
+            "type": "node-terminal"
+        }
+    ]
+}

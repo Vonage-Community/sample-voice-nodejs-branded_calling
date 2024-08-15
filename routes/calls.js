@@ -1,8 +1,8 @@
 import { vcr } from '@vonage/vcr-sdk';
 import express from "express";
 
-import { findObjectWithValue, getSipInfo } from "../helpers.js";
-import { getBrand } from "../storage.js";
+import { getSipInfo } from "../helpers/helpers.js";
+import { getBrand } from "../helpers/storage.js";
 
 const router = express.Router();
 const state = vcr.getInstanceState();
@@ -13,12 +13,13 @@ router.post('/voice/answer', async (req, res, next) => {
         console.log('to: ', req.body.to);
         console.log('from: ', req.body.from);
         console.log('from_user: ', req.body.from_user);
+        console.log('body: ', req.body);
 
         // App user calling
         if (req.body.from_user) {
             console.log('App -> SIP Flow');
             const sipUri = await getSipInfo();
-            const brandObj = getBrand(req.body.to);
+            const brandObj = await getBrand(req.body.to);
             console.log('brand: ', brandObj);
     
             if (brandObj) {
@@ -40,7 +41,7 @@ router.post('/voice/answer', async (req, res, next) => {
         // SIP user calling
         if (req.body.from) {
             console.log('SIP -> App Flow');
-            const brandObj = getBrand(req.body.from);
+            const brandObj = await getBrand(req.body.from);
             console.log('brand: ', brandObj);
 
             if (brandObj) {
