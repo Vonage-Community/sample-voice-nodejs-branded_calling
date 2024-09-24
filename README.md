@@ -53,3 +53,7 @@ Then you can start the app by running:
 ```
 node index.js
 ```
+
+## Branded Calling Client App
+To receive a branded call, you'll need a mobile application.  
+Follow the instructions provided in the [Branded Calling Client App](https://github.com/Vonage-Community/sample-voice-ios_android-branded_calling_apps) to set up and test the Branded Call for both iOS and Android devices.
