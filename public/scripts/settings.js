@@ -1,5 +1,7 @@
+import { getCredentials } from "./utils.js";
+
 export function fetchAndDisplaySettings() {
-    fetch("/settings")
+    fetch("/settings", { headers: getCredentials() })
         .then((response) => response.json())
         .then(({ sip_trunk_link,  sip_uri, configured_correctly }) => {
             document.getElementById("sip-uri").innerText = sip_uri;

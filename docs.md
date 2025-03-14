@@ -15,6 +15,15 @@ If you are not using [Cloud Runtime]https://developer.vonage.com/en/cloud-runtim
 
 This endpoint creates a new Vonage User and returns a token for use with the Vonage Client SDK.
 
+### Authorization 
+
+Include your Vonage API Key and Secret.
+
+|Key|Value|
+|:---|:---|
+|x-api-key|Vonage API Key|
+|x-api-secret|Vonage API Secret|
+
 ### Request Body
 
 |Key|Value|
@@ -38,6 +47,14 @@ This endpoint creates a new Vonage User and returns a token for use with the Von
 ## GET `/token`
 
 This endpoint returns a token for Vonage User. The User must be created first.
+
+### Authorization 
+
+Include a JWT for the user you are trying to get a token for in the headers. You get an initial token when create the user.
+
+|Key|Value|
+|:---|:---|
+|Authorization|Bearer ...|
 
 ### Query Parameters
 

@@ -19,7 +19,6 @@ function generateJwt(username) {
       "/*/devices/**": {},
       "/*/image/**": {},
       "/*/media/**": {},
-      "/*/applications/**": {},
       "/*/push/**": {},
       "/*/knocking/**": {},
       "/*/legs/**": {},

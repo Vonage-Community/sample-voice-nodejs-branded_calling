@@ -1,9 +1,9 @@
-import { showError } from "./utils.js";
+import { showError, getCredentials } from "./utils.js";
 
 export function fetchAndDisplayBrands() {
   const url = "/brands";
 
-  fetch(url)
+  fetch(url, { headers: getCredentials() })
     .then((response) => response.json())
     .then((data) => {
       const tableBody = document
@@ -45,7 +45,7 @@ export function createBrand(number, brand) {
 
   fetch(url, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { ...{ "Content-Type": "application/json" }, ...getCredentials() },
     body: JSON.stringify({ number: number, brand: brand })
   }).then(() => {
     document.getElementById("number").value = "";
@@ -59,7 +59,7 @@ export function createBrand(number, brand) {
 export function deleteBrand(item) {
   fetch("/brands", {
     method: "DELETE",
-    headers: { "Content-Type": "application/json" },
+    headers: { ...{ "Content-Type": "application/json" }, ...getCredentials() },
     body: JSON.stringify({ number: item.number })
   }).then(() => {
     fetchAndDisplayBrands()

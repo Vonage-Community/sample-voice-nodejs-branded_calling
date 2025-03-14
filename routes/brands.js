@@ -1,11 +1,11 @@
 import express from "express";
-
+import { validateRequestMiddleware } from '../helpers.js'
 import { getBrands, createBrand, deleteBrand } from "../helpers/storage.js";
 
 const router = express.Router();
 
 
-router.get('/brands', async (req, res, next) => {
+router.get('/brands', validateRequestMiddleware, async (req, res, next) => {
     try {
         const brands = await getBrands()
         res.json(brands);
@@ -14,7 +14,7 @@ router.get('/brands', async (req, res, next) => {
     }
 });
 
-router.post('/brands', async (req, res, next) => {
+router.post('/brands', validateRequestMiddleware, async (req, res, next) => {
     try {
         await createBrand(req.body);
         res.sendStatus(200);
@@ -23,7 +23,7 @@ router.post('/brands', async (req, res, next) => {
     }
 });
 
-router.delete('/brands', async (req, res, next) => {
+router.delete('/brands', validateRequestMiddleware, async (req, res, next) => {
     try {
         await deleteBrand(req.body.number)
         res.sendStatus(200);

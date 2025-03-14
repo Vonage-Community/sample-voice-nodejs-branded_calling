@@ -11,3 +11,16 @@ export function showError(message) {
     modal.style.display = "none";
   };
 }
+
+export const getCredentials = () => {
+  const userSession = JSON.parse(sessionStorage.getItem("userSession"));
+
+  if (userSession) {
+    return {
+      "X-API-Key": userSession.apiKey,
+      "X-API-Secret": userSession.password,
+    };
+  }
+
+  return {};
+};
