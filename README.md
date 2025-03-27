@@ -32,7 +32,9 @@ Once all of the dependencies are install, you can start debugging the project by
 vcr debug
 ```
 
-The terminal will give you a debug URL which you can use while you are interating over your code. Once you are ready to deploy, run this command:
+The terminal will give you a debug URL which you can use while you are iterating over your code. Once you are ready to deploy, run this command:
+
+> Note: This template uses a basic authentication implementation for simplicity. But if you are deploying in a production environment you should implement a more robust authentication method, such as [OAuth 2.0](https://oauth.net/2/) or [JSON Web Tokens (JWT)](https://jwt.io/introduction/).
 
 ```
 vcr deploy
